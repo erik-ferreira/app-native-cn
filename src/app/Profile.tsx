@@ -1,7 +1,8 @@
 import { View, Image } from "react-native"
 
 import { User } from "@/components/User"
-import { Skills } from "../components/Skills"
+import { Skills } from "@/components/Skills"
+import { Preferences } from "@/components/Preferences"
 
 interface ProfileProps {}
 
@@ -17,6 +18,8 @@ export function Profile({ ...rest }: ProfileProps) {
         <User />
 
         <Skills />
+
+        <Preferences />
       </View>
     </View>
   )
