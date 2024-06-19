@@ -4,6 +4,7 @@ import { View } from "react-native"
 import { Title } from "@/components/Title"
 import { Option } from "@/components/Option"
 import { Switch } from "@/components/Switch"
+import { Checkbox } from "@/components/Checkbox"
 
 export function Preferences() {
   const [isDarkMode, setIsDarkMode] = useState(false)
@@ -17,6 +18,13 @@ export function Preferences() {
         <Option.Title>Dark Mode</Option.Title>
 
         <Switch value={isDarkMode} onValueChange={setIsDarkMode} />
+      </Option>
+
+      <Option>
+        <Option.Icon icon="email" />
+        <Option.Title>Public email</Option.Title>
+
+        <Checkbox />
       </Option>
     </View>
   )
