@@ -1,13 +1,13 @@
-import { View, Text } from "react-native"
+import { useState } from "react"
+import { View } from "react-native"
 
 import { Title } from "@/components/Title"
 import { Option } from "@/components/Option"
+import { Switch } from "@/components/Switch"
 
-// import {} from "./styles"
+export function Preferences() {
+  const [isDarkMode, setIsDarkMode] = useState(false)
 
-interface PreferencesProps {}
-
-export function Preferences({ ...rest }: PreferencesProps) {
   return (
     <View>
       <Title>Hello</Title>
@@ -15,6 +15,8 @@ export function Preferences({ ...rest }: PreferencesProps) {
       <Option>
         <Option.Icon icon="dark-mode" />
         <Option.Title>Dark Mode</Option.Title>
+
+        <Switch value={isDarkMode} onValueChange={setIsDarkMode} />
       </Option>
     </View>
   )
